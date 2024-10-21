@@ -1,0 +1,58 @@
+
+import pygame    
+from math import pi    
+
+pygame.init()    
+
+# Set screen size    
+size = [400, 300]    
+screen = pygame.display.set_mode(size)    
+pygame.display.set_caption("T116 Yash Soni")    
+
+# Flag for the main loop    
+done = False    
+clock = pygame.time.Clock()    
+
+while not done:    
+    # Limit the loop to 10 iterations per second    
+    clock.tick(10)    
+    
+    for event in pygame.event.get():    
+        if event.type == pygame.QUIT:    
+            done = True  # Exit the loop    
+    
+    # Clear the screen with a black background    
+    screen.fill((255, 255, 255))  # Changed to white for visibility    
+    
+    # Draw a green line    
+    pygame.draw.line(screen, (0, 255, 0), [0, 0], [50, 30], 5)    
+    
+    # Draw a black line with a different color so it's visible    
+    pygame.draw.lines(screen, (0, 255, 0), False, [[0, 80], [50, 90], [200, 80], [220, 30]], 5)    
+    
+    # Draw a rectangle outline    
+    pygame.draw.rect(screen, (0, 0, 0), [75, 10, 50, 20], 2)    
+    
+    # Draw a solid rectangle    
+    pygame.draw.rect(screen, (0, 0, 0), [150, 10, 50, 20])    
+    
+    # Draw an ellipse outline    
+    pygame.draw.ellipse(screen, (255, 0, 0), [225, 10, 50, 20], 2)    
+    
+    # Draw a solid ellipse    
+    pygame.draw.ellipse(screen, (255, 0, 0), [300, 10, 50, 20])    
+    
+    # Draw a triangle using the polygon function    
+    pygame.draw.polygon(screen, (0, 0, 0), [[100, 100], [0, 200], [200, 200]], 5)    
+    
+    # Draw a circle    
+    pygame.draw.circle(screen, (0, 0, 255), [60, 250], 40)    
+    
+    # Draw an arc    
+    pygame.draw.arc(screen, (0, 0, 0), [210, 75, 150, 125], 0, pi / 2, 2)    
+    
+    # Update the display    
+    pygame.display.flip()    
+
+# Quit Pygame    
+pygame.quit()
