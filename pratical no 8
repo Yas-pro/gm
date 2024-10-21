@@ -1,0 +1,31 @@
+
+
+1. Create new praritcle system
+   Go to the menu bar and select GameObject > Effects > Particle System. and rename snow
+
+
+Configure the Particle System 'snow':
+1. set shape to box
+change the scale x and z as 10
+
+2 set start speed to 0
+
+3 set velocity over lifetime to 'falling'
+y axis as -5
+click dropdown choose 'Random between two constants'
+Y -1
+  -2
+
+4 increase emission to 100
+rate over time as 100
+
+5 set start size range[0.05, o.2]
+click dropdown choose 'Random between two constants'
+
+6 Set size over lifetime to 'fade away'
+click size contain then go to setting
+
+7 Add noise to create natural movement
+strength as .2
+
+
